@@ -8,11 +8,11 @@ permissions:
       
 jobs: 
   build-and-deploy:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-latest
     environment: DEV
     steps:
     - name: 'Az CLI login'
-      uses: azure/login@v1
+      uses: Azure/login@v1
       with:
           client-id: ${{ secrets.CLIENT_ID }}
           tenant-id: ${{ secrets.TENANT_ID }}
